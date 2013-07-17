@@ -136,26 +136,7 @@ define([
       });
     });
 	
-	router.on('route:scenario', function (number,section) {
-		$("#preloader").fadeIn(100);
-		var baseScenarioPage = "#scenario" + number;
-		if(window.location.hash == baseScenarioPage)
-	  	{
-		  require(['views/scenario' + number + '/page'], function (ScenarioPage) {
-			var scenarioPage = Vm.create(appView, 'ScenarioPage', ScenarioPage);
-			scenarioPage.render();
-			$("#preloader").fadeOut(100);
-		  });
-		}
-		if(section)
-		  {
-			require(['views/scenario' + number + '/'+ section + '/page'], function (SectionPage) {
-				var sectionPage = Vm.create(appView, 'SectionPage', SectionPage);
-				sectionPage.render();
-				$("#preloader").fadeOut(100);
-		  	});
-		  }
-    });
+	// Research Routes
 	router.on('route:research', function (section,subSection) {
 		$("#preloader").fadeIn(100);
 		var containerDiv = ".researchContainer-"+section

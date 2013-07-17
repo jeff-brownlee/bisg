@@ -3,7 +3,7 @@ define([
   'lodash',
   'backbone',
   'vm',
-  'text!templates/research/data/research/page.html'
+  'text!templates/research/competitors/research/page.html'
 ], function($, _, Backbone, Vm, template){
   var Page = Backbone.View.extend({
     el: '.sub-page',
@@ -12,7 +12,7 @@ define([
 	
       this.$el.hide().html(template).fadeIn(200);
 	  $(".subnav a").removeClass("active");
-	  $('.subnav a[href="#research/data/research"]').addClass("active");
+	  $('.subnav a[href="#research/competitors/research"]').addClass("active");
 	  
 	  $('a[data-toggle="modal"]').on("click",function(){
 		  var title = $(this).attr("data-modal-title");

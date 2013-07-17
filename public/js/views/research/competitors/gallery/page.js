@@ -3,7 +3,7 @@ define([
   'lodash',
   'backbone',
   'vm',
-  'text!templates/research/data/gallery/page.html'
+  'text!templates/research/competitors/gallery/page.html'
 ], function($, _, Backbone, Vm, template){
   var Page = Backbone.View.extend({
     el: '.sub-page',
@@ -25,7 +25,7 @@ define([
 		  if(this.complete) $(this).load();
 		});
 	  $(".subnav a").removeClass("active");
-	  $('.subnav a[href="#research/data/gallery"]').addClass("active");
+	  $('.subnav a[href="#research/competitors/gallery"]').addClass("active");
 	  
 
     },
