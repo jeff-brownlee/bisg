@@ -21,6 +21,8 @@ define([
 	  'approach-6': 'approach-6',
 	  'examples-1': 'examples-1',
 	  'proposal-1': 'proposal-1',
+	  'proposal-2': 'proposal-2',
+	  'proposal-3': 'proposal-3',
 	  'conclusion-1': 'conclusion-1',
 	  'research/:section/:subsection': 'research',
       // Default - catch all
@@ -123,7 +125,19 @@ define([
 	// Proposal Routes
 	router.on('route:proposal-1', function (actions) {
       require(['views/proposal/page-1'], function (ProposalPage) {
-        var page = Vm.create(appView, 'ExamplesPage', ProposalPage);
+        var page = Vm.create(appView, 'ProposalPage', ProposalPage);
+        page.render();
+      });
+    });
+	router.on('route:proposal-2', function (actions) {
+      require(['views/proposal/page-2'], function (ProposalPage) {
+        var page = Vm.create(appView, 'ProposalPage', ProposalPage);
+        page.render();
+      });
+    });
+	router.on('route:proposal-3', function (actions) {
+      require(['views/proposal/page-3'], function (ProposalPage) {
+        var page = Vm.create(appView, 'ProposalPage', ProposalPage);
         page.render();
       });
     });
